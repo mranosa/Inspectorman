@@ -1,0 +1,31 @@
+/* line 3, ../../app/styles/base.scss */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../../app/styles/base.scss */
+body {
+  font: normal 12px HelveticaNeue, Helvetica, Arial;
+}
+
+/* line 15, ../../app/styles/base.scss */
+a {
+  cursor: pointer;
+  color: #78808a;
+}
+
+/* line 20, ../../app/styles/base.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 24, ../../app/styles/base.scss */
+.container-fluid {
+  overflow-x: hidden;
+}

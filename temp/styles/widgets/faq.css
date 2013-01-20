@@ -1,0 +1,16 @@
+/* line 4, ../../../app/styles/widgets/faq.scss */
+.faq-questions .faq-number {
+  min-width: 25px;
+  display: inline-block;
+}
+/* line 8, ../../../app/styles/widgets/faq.scss */
+.faq-questions li {
+  line-height: 20px;
+}
+
+/* line 14, ../../../app/styles/widgets/faq.scss */
+.faq-list .faq-number {
+  display: inline-block;
+  line-height: 25px;
+  margin-right: 10px;
+}

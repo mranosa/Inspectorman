@@ -1,0 +1,36 @@
+/* line 4, ../../../app/styles/widgets/comments.scss */
+.recent-comments .separator {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 8, ../../../app/styles/widgets/comments.scss */
+.recent-comments .article-post {
+  padding-top: 8px;
+  margin-left: 78px;
+}
+/* line 13, ../../../app/styles/widgets/comments.scss */
+.recent-comments .user-info {
+  color: #ccc;
+  font-size: 10px;
+}
+/* line 18, ../../../app/styles/widgets/comments.scss */
+.recent-comments .user-content {
+  font-size: 12px;
+}
+/* line 22, ../../../app/styles/widgets/comments.scss */
+.recent-comments .separator {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 26, ../../../app/styles/widgets/comments.scss */
+.recent-comments .separator:last-child {
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+/* line 31, ../../../app/styles/widgets/comments.scss */
+.recent-comments .btn-group {
+  margin-top: 10px;
+}

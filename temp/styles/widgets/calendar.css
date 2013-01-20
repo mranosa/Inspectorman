@@ -1,0 +1,12 @@
+/* line 4, ../../../app/styles/widgets/calendar.scss */
+.external-event input {
+  height: 25px;
+  line-height: 25px;
+  margin: 0;
+}
+/* line 11, ../../../app/styles/widgets/calendar.scss */
+.external-event input, .external-event input:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
