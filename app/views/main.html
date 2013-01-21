@@ -8,8 +8,8 @@
 
             <div id="login" class="login-wrapper animated">
                 <div class="input-group">
-                    <input type="text" placeholder="email" class="input-transparent" id="email"/>
-                    <input type="password" placeholder="password" class="input-transparent"/>
+                    <input type="text" placeholder="email" class="input-transparent" id="email" ng-model="username"/>
+                    <input type="password" placeholder="password" class="input-transparent" ng-model="password"/>
                 </div>
                 <button id="login-submit" type="button" class="login-button" ng-click="login()">Login</button>
             </div>

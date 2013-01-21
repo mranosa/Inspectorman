@@ -12058,3 +12058,40 @@ input.search:focus {
     margin-top: -5px;
   }
 }
+/* line 36, ../../app/styles/main.scss */
+.ui-pnotify.custom .ui-pnotify-container {
+  background-color: #404040 !important;
+  background-image: none !important;
+  border: none !important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 44, ../../app/styles/main.scss */
+.ui-pnotify.custom .ui-pnotify-title, .ui-pnotify.custom .ui-pnotify-text {
+  font-family: Arial, Helvetica, sans-serif !important;
+  text-shadow: 2px 2px 3px black !important;
+  font-size: 10pt !important;
+  color: #FFF !important;
+  padding-left: 50px !important;
+  line-height: 1 !important;
+  text-rendering: geometricPrecision !important;
+}
+
+/* line 53, ../../app/styles/main.scss */
+.ui-pnotify.custom .ui-pnotify-title {
+  font-weight: bold;
+}
+
+/* line 56, ../../app/styles/main.scss */
+.ui-pnotify.custom .ui-pnotify-icon {
+  float: left;
+}
+
+/* line 59, ../../app/styles/main.scss */
+.ui-pnotify.custom .picon {
+  margin: 3px;
+  width: 33px;
+  height: 33px;
+}
