@@ -1,7 +1,8 @@
 'use strict';
 
 InspectormanApp.controller('MainCtrl', function($scope, $timeout, NotificationService,
-                                                StringValidator, ProgressBarService, $location) {
+                                                StringValidator, ProgressBarService,
+                                                $location, NavService) {
 
     $scope.username = '';
     $scope.password = '';
@@ -36,8 +37,11 @@ InspectormanApp.controller('MainCtrl', function($scope, $timeout, NotificationSe
                     $timeout(function() {
                         console.log('Loading user forms...');
                         ProgressBarService.animateProgress(100, function(){
+                            NavService.dashboarActive();
                             $timeout(function() {
                                 console.log('Done!');
+
+                                console.log(NavService);
                                 $location.path('/dashboard');
                             }, 1000);
                         });

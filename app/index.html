@@ -28,7 +28,40 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div ng-view style="height: 100%; width: 100%"></div>
+        <nav id="primary" class="main-nav" ng-show="showNav" ng-controller="NavCtrl">
+            <ul ng-show="showMain">
+                <li class="{{dashboardActive}}">
+                    <a href="#/dashboard" ng-click="setDashboardActive()"><i class="icon-dashboard"></i> Dashboard</a>
+                </li>
+
+                <li class="{{settingsActive}}">
+                    <a href="#/settings" ng-click="setSettingsActive()"><i class="icon-list-alt"></i> Settings</a>
+                </li>
+            </ul>
+            <ul ng-show="showSub">
+                <li class="{{detailActive}}">
+                    <a href="#/detail" ng-click="setDetailActive()"><i class="icon-dashboard"></i> Inspection Detail</a>
+                </li>
+
+                <li class="{{formsActive}}">
+                    <a href="#/forms" ng-click="setFormsActive()"><i class="icon-list-alt"></i> Forms</a>
+                </li>
+
+                <li class="{{summaryActive}}">
+                    <a href="#/summary" ng-click="setSummaryActive()"><i class="icon-dashboard"></i> Summary</a>
+                </li>
+
+                <li class="{{complaintsActive}}">
+                    <a href="#/complaints" ng-click="setComplaintsActive()"><i class="icon-list-alt"></i> Complaints</a>
+                </li>
+
+                <li class="{{historyActive}}">
+                    <a href="#/history" ng-click="setHistoryActive()"><i class="icon-list-alt"></i> History</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div ng-view></div>
 
         <script src="components/jquery/jquery.min.js"></script>
         <script src="components/pines-notify/jquery.pnotify.min.js"></script>
@@ -41,7 +74,11 @@
         <script src="scripts/services/StringValidator.js"></script>
         <script src="scripts/services/UserFirebaseService.js"></script>
         <script src="scripts/services/ProgressBarService.js"></script>
+        <script src="scripts/services/NavService.js"></script>
         <script src="scripts/controllers/dashboard.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
+
+        <script src="scripts/controllers/settings.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
