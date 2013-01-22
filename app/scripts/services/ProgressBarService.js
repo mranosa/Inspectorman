@@ -47,20 +47,12 @@ InspectormanApp.factory('ProgressBarService', function() {
   };
 
   ProgressBarService.prototype = {
-    animateProgress: function(progress, callback){
+    start: function(){
         $('#progress_bar .ui-progress .ui-label').hide();
         $('#progress_bar .ui-progress').css('width', '7%');
-
+    },
+    animateProgress: function(progress, callback){
         $('#progress_bar .ui-progress').animateProgress(progress, callback);
-        /*$('#progress_bar .ui-progress').animateProgress(40, function() {
-            $(this).animateProgress(79, function() {
-                setTimeout(function() {
-                    $('#progress_bar .ui-progress').animateProgress(100, function() {
-                        //TODO forward me
-                    });
-                }, 2000);
-            });
-        });*/
     }
   };
 

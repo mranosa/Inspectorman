@@ -1,7 +1,7 @@
 'use strict';
 
 InspectormanApp.controller('MainCtrl', function($scope, $timeout, NotificationService,
-                                                StringValidator, ProgressBarService) {
+                                                StringValidator, ProgressBarService, $location) {
 
     $scope.username = '';
     $scope.password = '';
@@ -28,23 +28,22 @@ InspectormanApp.controller('MainCtrl', function($scope, $timeout, NotificationSe
 
         //animate
         console.log('Initialize everything...');
-        ProgressBarService.animateProgress(20, function(){
+        ProgressBarService.start();
+        ProgressBarService.animateProgress(45, function(){
             $timeout(function() {
                 console.log('Loading user info...');
+                ProgressBarService.animateProgress(70, function(){
+                    $timeout(function() {
+                        console.log('Loading user forms...');
+                        ProgressBarService.animateProgress(100, function(){
+                            $timeout(function() {
+                                console.log('Done!');
+                                $location.path('/dashboard');
+                            }, 1000);
+                        });
+                    }, 2000);
+                });
             }, 2000);
-        });
-        ProgressBarService.animateProgress(40, function(){
-            $timeout(function() {
-                console.log('Loading inspections...');
-            }, 4000);
-        });
-        ProgressBarService.animateProgress(70, function(){
-            $timeout(function() {
-                console.log('Loading user forms...');
-            }, 2000);
-        });
-        ProgressBarService.animateProgress(100, function(){
-            console.log('Done!');
         });
     };
 
