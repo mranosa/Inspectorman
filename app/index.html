@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width"/>
         <link rel="stylesheet" href="styles/main.css"/>
         <link rel="stylesheet" href="styles/progress.css"/>
+        <link rel="stylesheet" href="components/nanoscroller/bin/css/nanoscroller.css"/>
+        <link rel="stylesheet" href="components/animate.css/animate.min.css"/>
         <link rel="stylesheet" href="components/pines-notify/oxygen/icons.css"/>
         <link rel="stylesheet" href="components/pines-notify/jquery.pnotify.default.icons.css"/>
         <link rel="stylesheet" href="components/pines-notify/jquery.pnotify.default.css"/>
@@ -40,7 +42,7 @@
             </ul>
             <ul ng-show="showSub">
                 <li class="{{detailActive}}">
-                    <a href="#/detail" ng-click="setDetailActive()"><i class="icon-dashboard"></i> Inspection Detail</a>
+                    <a href="#/detail" ng-click="setDetailActive()"><i class="icon-dashboard"></i> Detail</a>
                 </li>
 
                 <li class="{{formsActive}}">
@@ -61,10 +63,11 @@
             </ul>
         </nav>
 
-        <div ng-view></div>
+        <div ng-view style="width: 100%; height: 100%"></div>
 
         <script src="components/jquery/jquery.min.js"></script>
         <script src="components/pines-notify/jquery.pnotify.min.js"></script>
+        <script src="components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
         <script src="scripts/vendor/angular.js"></script>
 
         <!-- build:js scripts/scripts.js -->

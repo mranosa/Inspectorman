@@ -1,6 +1,6 @@
 'use strict';
 
-InspectormanApp.controller('NavCtrl', function ($scope) {
+InspectormanApp.controller('NavCtrl', function ($scope, $timeout) {
     $scope.showNav = false;
     $scope.showMain = false;
     $scope.showSub = false;
@@ -14,8 +14,59 @@ InspectormanApp.controller('NavCtrl', function ($scope) {
     $scope.complaintsActive = '';
     $scope.historyActive = '';
 
-    $scope.$on('dashboard_active', function () {
+    $scope.$on('show_nav', function () {
+        $scope.showNav();
+    });
+
+    $scope.$on('hide_nav', function () {
+        $scope.hideNav();
+    });
+
+    $scope.$on('switch_nav', function () {
+        $scope.switchNav();
+    });
+
+    $scope.showNav = function () {
         $scope.showNav = true;
+        $('#primary').addClass("animated bounceInLeft");
+
+        $timeout(function() {
+            $('#primary').removeClass("animated bounceInLeft");
+        }, 1000);
+    };
+
+    $scope.hideNav = function () {
+        $('#primary').addClass("animated bounceOutLeft");
+
+        $timeout(function() {
+            $('#primary').removeClass("animated bounceOutLeft");
+            $scope.showNav = false;
+        }, 500);
+    };
+
+    $scope.switchNav = function () {
+        $('#primary').addClass("animated bounceOutLeft");
+
+        $timeout(function() {
+            if($scope.showMain){
+                $scope.showMain = false;
+                $scope.showSub = true;
+            } else {
+                $scope.showMain = true;
+                $scope.showSub = true;
+            }
+
+            $('#primary').removeClass("animated bounceOutLeft");
+
+            $('#primary').addClass("animated bounceInLeft");
+
+            $timeout(function() {
+                $('#primary').removeClass("animated bounceInLeft");
+            }, 1000);
+        }, 1000);
+    };
+
+    $scope.$on('dashboard_active', function () {
         $scope.showMain = true;
         $scope.dashboardActive = 'active';
     });
@@ -26,7 +77,6 @@ InspectormanApp.controller('NavCtrl', function ($scope) {
     };
 
     $scope.$on('settings_active', function () {
-        $scope.showNav = true;
         $scope.showMain = true;
         $scope.settingsActive = 'active';
     });
@@ -37,7 +87,6 @@ InspectormanApp.controller('NavCtrl', function ($scope) {
     };
 
     $scope.$on('detail_active', function () {
-        $scope.showNav = true;
         $scope.showSub = true;
         $scope.detailActive = 'active';
     });
@@ -51,7 +100,6 @@ InspectormanApp.controller('NavCtrl', function ($scope) {
     };
 
     $scope.$on('forms_active', function () {
-        $scope.showNav = true;
         $scope.showSub = true;
         $scope.formsActive = 'active';
     });
@@ -65,7 +113,6 @@ InspectormanApp.controller('NavCtrl', function ($scope) {
     };
 
     $scope.$on('summary_active', function () {
-        $scope.showNav = true;
         $scope.showSub = true;
         $scope.summaryActive = 'active';
     });
@@ -79,7 +126,6 @@ InspectormanApp.controller('NavCtrl', function ($scope) {
     };
 
     $scope.$on('complaints_active', function () {
-        $scope.showNav = true;
         $scope.showSub = true;
         $scope.complaintsActive = 'active';
     });
@@ -93,7 +139,6 @@ InspectormanApp.controller('NavCtrl', function ($scope) {
     };
 
     $scope.$on('history_active', function () {
-        $scope.showNav = true;
         $scope.showSub = true;
         $scope.historyActive = 'active';
     });

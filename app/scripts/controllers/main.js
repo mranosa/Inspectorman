@@ -37,13 +37,17 @@ InspectormanApp.controller('MainCtrl', function($scope, $timeout, NotificationSe
                     $timeout(function() {
                         console.log('Loading user forms...');
                         ProgressBarService.animateProgress(100, function(){
-                            NavService.dashboarActive();
+                            console.log('Done!');
                             $timeout(function() {
-                                console.log('Done!');
+
 
                                 console.log(NavService);
-                                $location.path('/dashboard');
-                            }, 1000);
+                                NavService.showNav();
+                                NavService.dashboarActive();
+                                $timeout(function() {
+                                    $location.path('/dashboard');
+                                }, 1000);
+                            }, 500);
                         });
                     }, 2000);
                 });

@@ -2,4 +2,5 @@
 .gitattributes
 .idea
 .sass-cache
-
+temp
+components

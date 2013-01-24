@@ -111,8 +111,7 @@ nav#primary {
 }
 
 nav#secondary {
-  float: left;
-  width: 200px;
+  float: right;
   height: 100%;
   background: image-url("/images/linen-gray.png");
   @include box-shadow(-2px 0px 15px rgba(0, 0, 0, 0.4));

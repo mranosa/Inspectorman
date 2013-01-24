@@ -4,6 +4,12 @@ InspectormanApp.factory('NavService', function ($rootScope) {
 
     var NavService = {};
 
+    NavService.showNav = function () {
+        $rootScope.$broadcast('show_nav');
+    };
+    NavService.hideNav = function () {
+        $rootScope.$broadcast('hide_nav');
+    };
     NavService.dashboarActive = function () {
         $rootScope.$broadcast('dashboard_active');
     };
